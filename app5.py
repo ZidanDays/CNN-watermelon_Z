@@ -216,7 +216,7 @@ from PIL import Image
 import tensorflow as tf
 
 # Load trained model
-model = tf.keras.models.load_model('leaf_disease_classifier.h5')
+model = tf.keras.models.load_model('leaf_disease_classifier2.h5')
 
 # Streamlit App
 st.title("Sistem Pendeteksi Penyakit Tanaman Semangka")
