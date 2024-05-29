@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Pendeteksi Penyakit Tanaman Semangka</title>
+  </head>
+  <body>
+    <h1>Sistem Pendeteksi Penyakit Tanaman Semangka</h1>
+    <form method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" />
+      <input type="submit" value="Upload" />
+    </form>
+
+    {% if prediction %}
+    <h2>Predicted class: {{ prediction }}</h2>
+    <img src="{{ image_url }}" alt="Uploaded Image" style="max-width: 500px" />
+    {% elif error %}
+    <h2>{{ error }}</h2>
+    {% endif %}
+  </body>
+</html>
